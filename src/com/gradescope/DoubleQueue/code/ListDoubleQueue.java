@@ -3,11 +3,11 @@ package com.gradescope.DoubleQueue.code;
 import java.util.ArrayList;
 
 /**ListDoubleQueueContract
+ * This class implements the IDoubleQueue interface to construct a Double Queue with an arrayList backend structure
  *
+ * @invariant: 0 <= LQueue <= maxListSize
  *
- * @invariant:
- *
- * @corresponds:
+ * @corresponds: self = Queue of Doubles from LQueue[0] to LQueue[maxListSize]
  *
  */
 public class ListDoubleQueue implements IDoubleQueue
@@ -16,13 +16,13 @@ public class ListDoubleQueue implements IDoubleQueue
     private int maxListSize;
 
     /**ListDoubleQueueConstructorContact
+     * Constructor for the List Queue of Doubles object. Initializes all instance variables via parameters
      *
+     * @param maxSize value to be set as maximum size of the list
      *
-     * @param maxSize
+     * @pre maxListSize >= 0
      *
-     * @pre
-     *
-     * @post
+     * @post maxListSize = maxSize AND self = new ArrayList<Double>
      *
      */
     public ListDoubleQueue(int maxSize)
@@ -32,13 +32,13 @@ public class ListDoubleQueue implements IDoubleQueue
     }
 
     /**enqueueContact
+     * Enqueue adds a value to the back of the queue
      *
+     * @param val value to be enqueued
      *
-     * @param val
+     * @pre val >= 0
      *
-     * @pre
-     *
-     * @post
+     * @post [val is added to LQueue IF maxListSize has already been reached, replace the last element]
      *
      */
     @Override
