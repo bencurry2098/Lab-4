@@ -34,11 +34,12 @@ public class ListDoubleQueue implements IDoubleQueue
     /**enqueueContact
      * Enqueue adds a value to the back of the queue
      *
-     * @param val value to be enqueued
+     * @param val value to be added to the list
      *
      * @pre val >= 0
      *
-     * @post [val is added to LQueue IF maxListSize has already been reached, replace the last element]
+     * @post [val is added to LQueue IF maxListSize has already been reached, replace the last element] AND
+     * maxListSize = #maxListSize
      *
      */
     @Override
