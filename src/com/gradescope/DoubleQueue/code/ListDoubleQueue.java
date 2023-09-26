@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**ListDoubleQueueContract
  * This class implements the IDoubleQueue interface to construct a Double Queue with an arrayList backend structure
  *
- * @invariant: 0 <= LQueue <= maxListSize
+ * @invariant: 0 < maxListSize
  *
  * @corresponds: self = Queue of Doubles from LQueue[0] to LQueue[maxListSize]
  *
