@@ -25,8 +25,8 @@ public class ArrayDoubleQueue implements IDoubleQueue
      */
     public ArrayDoubleQueue(int maxSize)
     {
-
-
+        queueMaxSize = maxSize;
+        queue = new Double[queueMaxSize];
     }
 
     /**enqueueContact
@@ -42,7 +42,14 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public void enqueue(Double val)
     {
-
+        for(int i = 0; i < queueMaxSize; i++)
+        {
+            if(queue[i] == null)
+            {
+                queue[i] = val;
+                break;
+            }
+        }
     }
 
     //Note: The below 3 functions intentionally do not have contracts. You do not need to add them.
@@ -50,18 +57,45 @@ public class ArrayDoubleQueue implements IDoubleQueue
     @Override
     public Double dequeue()
     {
-
+        Double ret = 0.0;
+        for(int i = 0; i < queueMaxSize; i++)
+        {
+            if(queue[i] == null)
+            {
+                continue;
+            }
+            else
+            {
+                ret = queue[i];
+                queue[i] = null;
+                return ret;
+            }
+        }
+        return ret;
     }
 
     @Override
     public int length()
     {
-
+        int ret = 0;
+        for(Double d : queue)
+        {
+            if(d != null)
+            {
+                ret++;
+            }
+        }
+        return ret;
     }
 
     public String toString()
     {
-
+        String ret = "";
+        for(Double d : queue)
+        {
+            ret += ("[" + d + "] ");
+        }
+        return ret;
     }
 
     //-----------------Ignore the functions below this line-----------------------
