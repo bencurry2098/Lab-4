@@ -67,7 +67,10 @@ public class ArrayDoubleQueue implements IDoubleQueue
             else
             {
                 ret = queue[i];
-                queue[i] = null;
+                for(int j = 1; j < queueMaxSize; j++)
+                {
+                    queue[j-1] = queue[j];
+                }
                 return ret;
             }
         }
