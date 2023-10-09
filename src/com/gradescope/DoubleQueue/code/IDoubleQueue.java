@@ -1,11 +1,11 @@
 package com.gradescope.DoubleQueue.code;
 
 /**IDoubleQueueContract
- *@initialization Ensures:
+ * @initialization ensures: [a queue of type double is created]
  *
- *@defines:
+ * @defines: max_queue_size = queueMaxSize
  *
- *@constraints: 0 < |self| <= queueMaxSize
+ *@constraints: 0 < |self| <= max_queue_size
  */
 public interface IDoubleQueue
 {
