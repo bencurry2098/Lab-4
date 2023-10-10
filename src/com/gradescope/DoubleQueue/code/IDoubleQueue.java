@@ -52,4 +52,20 @@ public interface IDoubleQueue<T>
      * self = #self
      */
     public String toString();
+
+    public default  T peek()
+    {
+        T ret,
+          temp;
+        int queueSize = length();
+        temp = dequeue();
+        ret = temp;
+        enqueue(temp);
+        for(int i = 1; i < queueSize; i++)
+        {
+            temp = dequeue();
+            enqueue(temp);
+        }
+        return ret;
+    }
 }
