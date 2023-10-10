@@ -31,7 +31,7 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
     public ArrayDoubleQueue(int maxSize)
     {
         queueMaxSize = maxSize;
-        queue = new T[queueMaxSize];
+        queue = (T[])new Object[queueMaxSize];
     }
 
     /**enqueueContact
