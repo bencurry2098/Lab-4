@@ -99,9 +99,9 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
     public String toString()
     {
         String ret = "";
-        for(T d : queue)
+        for(int i = 0; i < length(); i++)
         {
-            ret += ("[" + d + "] ");
+            ret += ("[" + queue[i] + "] ");
         }
         return ret;
     }
