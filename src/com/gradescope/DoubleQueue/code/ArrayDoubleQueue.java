@@ -1,3 +1,8 @@
+/**
+ * Cayden Akers
+ * Ben Curry 
+ * Cameron Scott
+ */
 package com.gradescope.DoubleQueue.code;
 
 /**ArrayDoubleQueueContract
