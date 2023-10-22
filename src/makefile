@@ -5,6 +5,6 @@ run:  com/Gradescope/DoubleQueue/code/ArrayDoubleQueue.class com/Gradescope/Doub
 	java  com.Gradescope.DoubleQueue.code.ArrayDoubleQueue com.Gradescope.DoubleQueue.code.IDoubleQueue com.Gradescope.DoubleQueue.code.ListDoubleQueue 
 
 clean:
-	$(RM) *.class
+	rm -f com/Gradescope/DoubleQueue/code/*.class
 
 
