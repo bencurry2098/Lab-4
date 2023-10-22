@@ -6,5 +6,6 @@ run:  com/Gradescope/DoubleQueue/code/ArrayDoubleQueue.class com/Gradescope/Doub
 
 clean:
 	rm -f com/Gradescope/DoubleQueue/code/*.class
+	rm -f Driver/*.class
 
 
