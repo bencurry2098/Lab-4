@@ -101,7 +101,11 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
         String ret = "";
         for(int i = 0; i < length(); i++)
         {
-            ret += ("[" + queue[i] + "] ");
+            if (i == length() - 1) {
+                ret += ("[" + queue[i] + "]");
+                break;
+            }
+            else ret += ("[" + queue[i] + "] ");
         }
         return ret;
     }

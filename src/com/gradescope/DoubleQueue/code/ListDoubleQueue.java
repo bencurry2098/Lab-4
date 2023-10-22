@@ -74,10 +74,16 @@ public class ListDoubleQueue<T> implements IDoubleQueue<T>
 
     public String toString()
     {
+        int size = LQueue.size();
         String ret = "";
-        for(T d : LQueue)
-        {
-            ret += ("[" + d + "] ");
+        for (int i = 0; i < size; i++) {
+            ret += "[" + LQueue.get(i);
+            if (i != size - 1) {
+                ret += "] ";
+            }
+            else {
+                ret += "]";
+            }
         }
         return ret;
     }
