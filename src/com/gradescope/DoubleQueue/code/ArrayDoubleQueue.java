@@ -6,7 +6,7 @@
 package com.gradescope.DoubleQueue.code;
 
 /**ArrayDoubleQueueContract
- * Array implementation for the Double queue.
+ * Array implementation for the queue of type T.
  *
  * @invariant: queueMaxSize > 0
  *
@@ -25,7 +25,7 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
      *
      * @pre maxSize > 0
      *
-     * @post queueMaxSize = maxSize AND self = new Double[queueMaxSize].
+     * @post queueMaxSize = maxSize AND self = (T[]) new Object[queueMaxSize].
      *
      */
     public ArrayDoubleQueue(int maxSize)
@@ -37,7 +37,7 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
     /**enqueueContact
      * Enqueue adds an item to the queue.
      *
-     * @param val the Double to be added
+     * @param val the value to be added
      *
      * @pre |self| < queueMaxSize
      *
