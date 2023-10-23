@@ -6,7 +6,7 @@
 package com.gradescope.DoubleQueue.code;
 
 /**IDoubleQueueContract
- * @initialization ensures: [a queue of type double is created]
+ * @initialization ensures: [a queue of type T is created]
  *
  * @defines: max_queue_size = queueMaxSize
  *
@@ -21,7 +21,7 @@ public interface IDoubleQueue<T>
     /**dequeueContract
      * Dequeue removes an item from the queue
      *
-     *@return returns the double at the front of the queue
+     *@return returns the value at the front of the queue
      *
      *@pre None
      *
@@ -42,17 +42,27 @@ public interface IDoubleQueue<T>
     public int length();
 
     /**toStringContract
-     * toString returns a string with the format: [double]
+     * toString returns a string with the format: [value]
      *
-     *@return a string with the format: [double]
+     *@return a string with the format: [value]
      *
      *@pre None
      *
-     *@post toString = "[double]"
+     *@post toString = "[value]"
      * self = #self
      */
     public String toString();
 
+    /**peekContract
+     * peek returns the value at front of queue without changing it
+     * 
+     * @return value of type T
+     * 
+     * @pre None
+     * 
+     * @post peek = [value at front of queue]
+     * 
+    */
     public default  T peek()
     {
         T ret,
