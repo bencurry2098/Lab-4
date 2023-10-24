@@ -98,16 +98,12 @@ public class ArrayDoubleQueue<T> implements IDoubleQueue<T>
 
     public String toString()
     {
-        String ret = "";
-        for(int i = 0; i < length(); i++)
+        String arrayReturn = "";
+        for(T A : queue)
         {
-            if (i == length() - 1) {
-                ret += ("[" + queue[i] + "]");
-                break;
-            }
-            else ret += ("[" + queue[i] + "] ");
+            arrayReturn += "[" + A + "] ";
         }
-        return ret;
+        return arrayReturn;
     }
 
     //-----------------Ignore the functions below this line-----------------------
